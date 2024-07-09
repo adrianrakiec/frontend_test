@@ -1,0 +1,27 @@
+@import "../../styles/styles.scss";
+
+.second-block {
+  color: $main-text;
+
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 1em;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__button {
+    flex-grow: 1;
+    max-width: 40%;
+    margin-bottom: 1em;
+    padding: 0.7em;
+    background: none;
+    border: 1px solid $main-text;
+    color: $light-text;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}

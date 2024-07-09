@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { TitleComponent } from './title/title.component';
+import { SecondBlockComponent } from './second-block/second-block.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, TitleComponent],
+  imports: [RouterOutlet, HeaderComponent, TitleComponent,SecondBlockComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
