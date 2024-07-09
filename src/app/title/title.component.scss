@@ -7,13 +7,15 @@
 
   &__header {
     position: relative;
+    display: inline-block;
+    margin: 0 auto;
     font-size: 2rem;
 
     &::after {
       content: "";
       position: absolute;
       display: block;
-      width: 30%;
+      width: 70%;
       height: 1.2px;
       left: 50%;
       margin-top: 0.6em;
