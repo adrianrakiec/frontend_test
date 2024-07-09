@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-first-block',
@@ -8,10 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './first-block.component.scss',
 })
 export class FirstBlockComponent {
-  selectedOption: string = '';
+  @Output() selectedOption = new EventEmitter<string>();
 
   onOptionChange(option: string) {
-    this.selectedOption = option;
-    console.log(this.selectedOption);
+    this.selectedOption.emit(option);
   }
 }

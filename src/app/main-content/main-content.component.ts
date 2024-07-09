@@ -12,5 +12,9 @@ import { ThirdBlockComponent } from '../third-block/third-block.component';
   styleUrl: './main-content.component.scss'
 })
 export class MainContentComponent {
+  selectedOption: string = "";
 
+  handleDataEvent(data: string) {
+    this.selectedOption = data;
+  }
 }
