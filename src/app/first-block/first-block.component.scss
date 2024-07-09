@@ -1,0 +1,18 @@
+@import "../../styles/styles.scss";
+
+.first-block {
+  color: $main-text;
+
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 1em;
+  }
+
+  &__option {
+    margin-bottom: 1em;
+
+    label {
+        margin-left: 1em;
+    }
+  }
+}
