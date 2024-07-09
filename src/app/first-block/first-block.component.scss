@@ -2,6 +2,7 @@
 
 .first-block {
   color: $main-text;
+  padding: 1.5em;
 
   &__title {
     text-transform: uppercase;
@@ -10,6 +11,7 @@
 
   &__option {
     margin-bottom: 1em;
+    font-size: 1.5rem;
 
     label {
         margin-left: 1em;

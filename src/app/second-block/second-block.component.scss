@@ -2,6 +2,8 @@
 
 .second-block {
   color: $main-text;
+  padding: 1.5em;
+  text-align: right;
 
   &__title {
     text-transform: uppercase;
@@ -15,9 +17,8 @@
 
   &__button {
     flex-grow: 1;
-    max-width: 40%;
     margin-bottom: 1em;
-    padding: 0.7em;
+    padding: 0.7em 2.2em;
     background: none;
     border: 1px solid $main-text;
     color: $light-text;
