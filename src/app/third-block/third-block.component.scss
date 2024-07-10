@@ -2,16 +2,13 @@
 
 .third-block {
   color: $main-text;
-  padding: 3em;
+  padding: 2em;
 
   &__title {
     text-transform: uppercase;
-    margin-bottom: 3em;
+    margin-bottom: 2em;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-
-  &__content {
   }
 }
