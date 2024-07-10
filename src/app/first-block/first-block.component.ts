@@ -1,4 +1,5 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-first-block',
@@ -8,9 +9,9 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrl: './first-block.component.scss',
 })
 export class FirstBlockComponent {
-  @Output() selectedOption = new EventEmitter<string>();
+  constructor(private dataService: DataService) {}
 
-  onOptionChange(option: string) {
-    this.selectedOption.emit(option);
+  onOptionChange(option: string): void {
+    this.dataService.setSelectedOption(option);
   }
 }

@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-second-block',
@@ -8,33 +9,19 @@ import { Component, Input } from '@angular/core';
   styleUrl: './second-block.component.scss',
 })
 export class SecondBlockComponent {
-  @Input() option: string = '';
+  currentText: string = '';
 
-  replace() {
-    this.selectOption();
-  }
+  constructor(private dataService: DataService) {}
 
-  add() {
-    this.selectOption();
-  }
+  onClickHandle(func: 'replace' | 'add') {
+    const quote = this.dataService.getNextUniqueQuote(func);
 
-  selectOption() {
-    switch (this.option) {
-      case 'first':
-        alert('first');
-        break;
-
-      case 'second':
-        alert('second');
-        break;
-
-      case 'random':
-        alert('random');
-        break;
-
-      default:
-        alert('Nie wybrano opcji!');
-        break;
+    if (func === 'add') {
+      this.currentText += ' ' + quote;
+      this.dataService.setCurrentQuote(this.currentText);
+    } else if (func === 'replace') {
+      this.currentText = quote;
+      this.dataService.setCurrentQuote(this.currentText);
     }
   }
 }
