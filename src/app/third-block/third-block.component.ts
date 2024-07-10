@@ -17,5 +17,13 @@ export class ThirdBlockComponent {
     this.dataService.currentQuote$.subscribe((quote) => {
       this.quote = quote;
     });
+
+    this.dataService.resetDisplay$.subscribe(() => {
+      this.resetDisplay();
+    });
+  }
+
+  resetDisplay() {
+    this.quote = '';
   }
 }

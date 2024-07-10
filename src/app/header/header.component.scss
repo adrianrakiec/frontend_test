@@ -19,6 +19,11 @@
     background-color: $logo-background;
     border-radius: 50%;
     padding: 0.5em;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $hover-color;
+    }
   }
 
   &__icon {
@@ -29,6 +34,8 @@
   }
 
   &__title {
+    display: flex;
+    flex-direction: column;
     font-size: 1.5rem;
     align-self: center;
   }

@@ -3,6 +3,7 @@
 .first-block {
   color: $main-text;
   padding: 1.5em;
+  z-index: 5;
 
   &__title {
     text-transform: uppercase;
@@ -14,7 +15,7 @@
     font-size: 1.5rem;
 
     label {
-        margin-left: 1em;
+      margin-left: 1em;
     }
   }
 }

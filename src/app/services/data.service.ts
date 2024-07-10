@@ -15,9 +15,13 @@ export class DataService {
 
   private selectedOption = new BehaviorSubject<string>('');
   private currentQuote = new BehaviorSubject<string>('');
+  private resetDisplay = new BehaviorSubject<boolean>(false);
+  private personalData = new BehaviorSubject<string>('');
 
   selectedOption$ = this.selectedOption.asObservable();
   currentQuote$ = this.currentQuote.asObservable();
+  resetDisplay$ = this.resetDisplay.asObservable();
+  personalData$ = this.personalData.asObservable();
 
   setSelectedOption(option: string): void {
     this.selectedOption.next(option);
@@ -25,6 +29,14 @@ export class DataService {
 
   setCurrentQuote(quote: string): void {
     this.currentQuote.next(quote);
+  }
+
+  setResetDisplay() {
+    this.resetDisplay.next(!this.resetDisplay.value);
+  }
+
+  setPersonalData(data: string) {
+    this.personalData.next(data);
   }
 
   private loadQuotes() {

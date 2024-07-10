@@ -24,5 +24,11 @@
     color: $light-text;
     text-transform: uppercase;
     font-weight: bold;
+    transition: background-color 0.2s, color 0.2s;
+
+    &:hover {
+      background-color: $hover-color;
+      color: $main-text;
+    }
   }
 }
