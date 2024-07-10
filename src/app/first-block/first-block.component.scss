@@ -2,7 +2,8 @@
 
 .first-block {
   color: $main-text;
-  padding: 1.5em 3.5em;
+  padding: 1.5em 1.8em;
+  font-size: 1rem;
   z-index: 5;
 
   &__title {
@@ -12,11 +13,55 @@
 
   &__option {
     margin-bottom: 1em;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: $light-text;
+    cursor: pointer;
 
     label {
       margin-left: 1em;
+      cursor: pointer;
+    }
+  }
+
+  &__radio-btn {
+    display: flex;
+    align-items: center;
+
+    span {
+      display: block;
+      margin-left: 0.7em;
+    }
+  }
+
+  input[type="radio"] {
+    position: relative;
+    display: inline-block;
+    appearance: none;
+    color: currentColor;
+    width: 1.5em;
+    height: 1.5em;
+    border: 3px solid $main-text;
+    border-radius: 50%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      width: 60%;
+      height: 60%;
+      border-radius: 50%;
+      background-color: $main-text;
+      transform: scale(0);
+      transition: transform 0.2s;
+    }
+
+    &:checked::before {
+      transform: scale(1);
+    }
+
+    &:checked + span {
+      color: $main-text;
     }
   }
 }
@@ -25,11 +70,18 @@
   .first-block {
     &__title {
       text-align: center;
+      padding: 0 3.5em;
       margin-bottom: 2em;
     }
 
     &__option {
-      font-size: 1.8rem;
+      font-size: 2rem;
+    }
+
+    input[type="radio"] {
+      width: 3em;
+      height: 3em;
+      border: 5px solid $main-text;
     }
   }
 }

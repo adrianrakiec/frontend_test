@@ -2,18 +2,24 @@
     <h2 class="first-block__title">blok pierwszy</h2>
     <div class="first-block__options">
         <div class="first-block__option">
-            <input id="first" type="radio" name="options" value="first" (change)="onOptionChange('first')">
-            <label for="first">Opcja pierwsza</label>
+            <label class="first-block__radio-btn">
+                <input type="radio" name="options" value="first" (change)="onOptionChange('first')">
+                <span>Opcja pierwsza</span>
+            </label>
         </div>
 
         <div class="first-block__option">
-            <input id="second" type="radio" name="options" value="second" (change)="onOptionChange('second')">
-            <label for="second">Opcja druga</label>
+            <label class="first-block__radio-btn">
+                <input type="radio" name="options" value="second" (change)="onOptionChange('second')">
+                <span>Opcja druga</span>
+            </label>
         </div>
 
         <div class="first-block__option">
-            <input id="random" type="radio" name="options" value="random" (change)="onOptionChange('random')">
-            <label for="random">Opcja losowa</label>
+            <label class="first-block__radio-btn">
+                <input type="radio" name="options" value="random" (change)="onOptionChange('random')">
+                <span>Opcja losowa</span>
+            </label>
         </div>
     </div>
 </section>
