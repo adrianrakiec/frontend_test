@@ -3,7 +3,7 @@
 .title {
   text-align: center;
   margin-top: 1em;
-  margin-bottom: 3em;
+  margin-bottom: 5em;
   color: $main-text;
 
   &__header {
@@ -22,6 +22,14 @@
       margin-top: 0.6em;
       transform: translateX(-50%);
       background-color: $main-text;
+    }
+  }
+}
+
+@media (min-width: 960px) {
+  .title {
+    &__header {
+      font-size: 3rem;
     }
   }
 }

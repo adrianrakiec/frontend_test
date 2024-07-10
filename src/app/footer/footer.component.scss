@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2em 2em;
+  padding: 1.2em 3.5em;
   background-color: $footer-backgroud;
 
   &__square {
@@ -96,6 +96,10 @@
       transform: translateY(0);
     }
   }
+
+  &__large {
+    display: none;
+  }
 }
 
 @keyframes rotate-border {
@@ -105,5 +109,30 @@
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 960px) {
+  .footer {
+    &__btn {
+      padding: 1em 7em;
+      border: 1.5px solid $lighter-text;
+    }
+
+    &__option {
+      font-size: 1.2rem;
+    }
+
+    &__arrow {
+      left: 30%;
+      top: -130%;
+      transform: scale(0.08);
+    }
+
+    &__large {
+      display: block;
+      color: $lighter-text;
+      font-size: 2rem;
+    }
   }
 }

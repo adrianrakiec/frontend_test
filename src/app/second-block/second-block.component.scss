@@ -2,7 +2,7 @@
 
 .second-block {
   color: $main-text;
-  padding: 1.5em;
+  padding: 1.5em 3.5em;
   text-align: right;
 
   &__title {
@@ -18,7 +18,7 @@
   &__button {
     flex-grow: 1;
     margin-bottom: 1em;
-    padding: 0.7em 2.2em;
+    padding: 0.6em 1.8em;
     background: none;
     border: 1px solid $main-text;
     color: $light-text;
@@ -29,6 +29,28 @@
     &:hover {
       background-color: $hover-color;
       color: $main-text;
+    }
+  }
+}
+
+@media (min-width: 960px) {
+  .second-block {
+    text-align: center;
+
+    &__buttons {
+      flex-direction: row;
+      justify-content: center;
+      gap: 2em;
+    }
+
+    &__button {
+      flex: 0;
+      padding: 0.7em 3em;
+      font-size: 1.5rem;
+    }
+
+    &__title {
+      margin-bottom: 2em;
     }
   }
 }

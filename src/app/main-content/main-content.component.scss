@@ -6,3 +6,25 @@
     justify-content: space-between;
   }
 }
+
+@media (min-width: 960px) {
+  .main {
+    font-size: 1.2rem;
+
+    &__large-screen {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    &__first-block,
+    &__second-block,
+    &__add-content {
+      flex: 1;
+    }
+
+    &__third-block {
+      width: 34%;
+      text-align: center;
+    }
+  }
+}

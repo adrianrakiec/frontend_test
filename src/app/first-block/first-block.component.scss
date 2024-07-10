@@ -2,7 +2,7 @@
 
 .first-block {
   color: $main-text;
-  padding: 1.5em;
+  padding: 1.5em 3.5em;
   z-index: 5;
 
   &__title {
@@ -13,9 +13,23 @@
   &__option {
     margin-bottom: 1em;
     font-size: 1.5rem;
+    color: $light-text;
 
     label {
       margin-left: 1em;
+    }
+  }
+}
+
+@media (min-width: 960px) {
+  .first-block {
+    &__title {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+
+    &__option {
+      font-size: 1.8rem;
     }
   }
 }

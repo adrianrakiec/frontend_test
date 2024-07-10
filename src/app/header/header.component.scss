@@ -38,5 +38,22 @@
     flex-direction: column;
     font-size: 1.5rem;
     align-self: center;
+    text-align: right;
+  }
+}
+
+@media (min-width: 960px) {
+  .header {
+    padding: 1.5em 4em;
+
+    &__icon {
+      width: 7rem;
+      height: 7rem;
+      padding: 0.8em;
+    }
+
+    &__title {
+      font-size: 2rem;
+    }
   }
 }
