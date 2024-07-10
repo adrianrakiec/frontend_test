@@ -9,7 +9,6 @@ import { DataService } from '../services/data.service';
   styleUrl: './third-block.component.scss',
 })
 export class ThirdBlockComponent {
-  quotes: string[] = [];
   quote: string = '';
 
   constructor(private dataService: DataService) {}

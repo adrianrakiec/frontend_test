@@ -16,12 +16,16 @@ export class SecondBlockComponent {
   onClickHandle(func: 'replace' | 'add') {
     const quote = this.dataService.getNextUniqueQuote(func);
 
-    if (func === 'add') {
-      this.currentText += ' ' + quote;
-      this.dataService.setCurrentQuote(this.currentText);
-    } else if (func === 'replace') {
-      this.currentText = quote;
-      this.dataService.setCurrentQuote(this.currentText);
+    if (quote) {
+      const spanQuote = `<span>${quote}</span>`;
+
+      if (func === 'add') {
+        this.currentText += ' ' + spanQuote;
+        this.dataService.setCurrentQuote(this.currentText);
+      } else if (func === 'replace') {
+        this.currentText = spanQuote;
+        this.dataService.setCurrentQuote(this.currentText);
+      }
     }
   }
 }
