@@ -33,6 +33,7 @@ export class DataService {
 
   setResetDisplay() {
     this.resetDisplay.next(!this.resetDisplay.value);
+    this.tempQuotes = [];
   }
 
   setPersonalData(data: string) {
@@ -73,8 +74,10 @@ export class DataService {
             this.tempQuotes.push(quote);
           } else {
             quote = '';
+            alert('Wykorzystano wszystkie opcje!');
           }
         } else if (func === 'replace') {
+          this.tempQuotes = [];
           let index = Math.floor(Math.random() * this.quotes.length);
           quote = this.quotes[index];
         }
@@ -88,6 +91,7 @@ export class DataService {
             this.tempQuotes.push(quote);
           } else {
             quote = '';
+            alert('Doklejane opcje muszą być unikalne!');
           }
         } else if (func === 'replace') {
           this.tempQuotes = [quote];
@@ -102,6 +106,7 @@ export class DataService {
             this.tempQuotes.push(quote);
           } else {
             quote = '';
+            alert('Doklejane opcje muszą być unikalne!');
           }
         } else if (func === 'replace') {
           this.tempQuotes = [quote];
