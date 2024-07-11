@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2em 3.5em;
+  padding: 1.2em 2em;
   background-color: $footer-backgroud;
 
   &__square {
@@ -71,7 +71,7 @@
     background: none;
     line-height: 1.1;
     margin-bottom: 0.5em;
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-transform: uppercase;
     cursor: pointer;
 
@@ -85,15 +85,15 @@
     top: -200%;
     left: 0;
     right: 0;
-    transform: translateY(130%);
-    padding: 1.2em;
+    transform: translateY(150%);
+    padding: 1.1em;
     background-color: white;
     color: $footer-backgroud;
     transition: transform 0.4s;
     z-index: -1;
 
     &--active {
-      transform: translateY(0);
+      transform: translateY(20%);
     }
   }
 
@@ -133,6 +133,15 @@
       display: block;
       color: $lighter-text;
       font-size: 2rem;
+    }
+
+    &__options-frame {
+      top: -180%;
+      transform: translateY(150%);
+
+      &--active {
+        transform: translateY(0);
+      }
     }
   }
 }
